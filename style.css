@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #2B2A33;
+    overflow-y: scroll;
+}
+
+.container button {
+    margin: 2vh 2vw;
+    padding: 1.5vh 2.5vw;
+    font-size: 2vh;
+    cursor: pointer;
+    background-color: #42414D;
+    color: #FBFBFE;
+    border-radius: 20px;
+    border: none;
+    font-family: 'Segoe UI', sans;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container button:hover {
+    background-color: #52525E;
+    border: 2px solid #0A84FF;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.container button:active {
+    background-color: #3A3945;
+    border: 2px solid #0A84FF;
+}
