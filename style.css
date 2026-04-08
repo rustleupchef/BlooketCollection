@@ -82,6 +82,7 @@ body {
 .container button {
     width: 100%;
     min-height: 180px;
+    max-height: 220px;
     padding: 1.5rem;
     font-size: 1.1rem;
     cursor: pointer;
