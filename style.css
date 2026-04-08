@@ -1,33 +1,84 @@
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+body {
+    margin: 0;
+    min-height: 100vh;
     background-color: #2B2A33;
-    overflow-y: scroll;
+    color: #FBFBFE;
+    font-family: 'Segoe UI', sans;
+}
+
+.search-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 1.5rem 0;
+    background-color: #2B2A33;
+}
+
+.search-wrapper input {
+    width: min(360px, 100%);
+    padding: 0.95rem 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: #32313b;
+    color: #FBFBFE;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-wrapper input::placeholder {
+    color: rgba(251, 251, 254, 0.66);
+}
+
+.search-wrapper input:focus {
+    border-color: #0A84FF;
+    box-shadow: 0 0 0 0.3rem rgba(10, 132, 255, 0.2);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    justify-items: center;
+    padding: 1.5rem;
+    min-height: calc(100vh - 1rem);
+    background-color: #2B2A33;
+    overflow-y: auto;
 }
 
 .container button {
-    margin: 2vh 2vw;
-    padding: 1.5vh 2.5vw;
-    font-size: 2vh;
+    width: 100%;
+    min-height: 180px;
+    padding: 1.5rem;
+    font-size: 1.1rem;
     cursor: pointer;
     background-color: #42414D;
     color: #FBFBFE;
-    border-radius: 20px;
+    border-radius: 28px;
     border: none;
     font-family: 'Segoe UI', sans;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.3;
 }
 
 .container button:hover {
     background-color: #52525E;
     border: 2px solid #0A84FF;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
 }
 
 .container button:active {
     background-color: #3A3945;
     border: 2px solid #0A84FF;
+    transform: translateY(0);
 }
