@@ -67,6 +67,25 @@ body {
     transform: translateY(-1px);
 }
 
+.search-wrapper input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: var(--brand-100);
+    border-radius: 50%;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z'/%3E%3C/svg%3E") center / contain no-repeat;
+    cursor: pointer;
+}
+
+.search-wrapper input::-ms-clear {
+    display: block;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: var(--brand-100);
+    border-radius: 50%;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
